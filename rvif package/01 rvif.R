@@ -3,6 +3,7 @@
 
 ## ----setup, include=FALSE-----------------------------------------------------
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE) #, cache = TRUE)
+options(tinytex.verbose = TRUE)
 library(rvif)
 library(knitr)
 library(kableExtra)
@@ -10,15 +11,13 @@ library(memisc) # mtable
 
 
 ## ----WisseltableHTML, eval = knitr::is_html_output()--------------------------
-#> data(Wissel)
-#> WisselTABLE = Wissel[,-3]
-#> knitr::kable(WisselTABLE, format = "html", caption = "Data set presented previously by @Wissell", align="cccccc")
+# WisselTABLE = Wissel[,-3]
+# knitr::kable(WisselTABLE, format = "html", caption = "Data set presented previously by @Wissell", align="cccccc", digits = 3)
 
 
 ## ----WisseltableLATEX, eval = knitr::is_latex_output()------------------------
-data(Wissel)
 WisselTABLE = Wissel[,-3]
-knitr::kable(WisselTABLE, format = "latex", caption = "Data set presented previously by @Wissell", align="cccccc")
+knitr::kable(WisselTABLE, format = "latex", caption = "Data set presented previously by Wissell", align="cccccc", digits = 3)
 
 
 ## ----Wisselregression---------------------------------------------------------
@@ -87,35 +86,35 @@ regWISSEL3 = lm(D~C+CP)
 
 
 ## ----Wissel0tableHTML, eval = knitr::is_html_output()-------------------------
-#> knitr::kable(regWISSEL0table, format = "html", caption = "OLS estimation for the Wissel model", align="lcccc")
+# knitr::kable(regWISSEL0table, format = "html", caption = "OLS estimation for the Wissel model", align="cccc", digits = 3)
 
 
 ## ----Wissel0tableLATEX, eval = knitr::is_latex_output()-----------------------
-knitr::kable(regWISSEL0table, format = "latex", caption = "OLS estimation for the Wissel model", align="lcccc") 
+knitr::kable(regWISSEL0table, format = "latex", caption = "OLS estimation for the Wissel model", align="cccc", digits = 3) 
 
 
 ## ----Wissel1tableHTML, eval = knitr::is_html_output()-------------------------
-#> knitr::kable(regWISSEL1table, format = "html", caption = "OLS estimation for part of the Wissel model", align="lcccc")
+# knitr::kable(regWISSEL1table, format = "html", caption = "OLS estimation for part of the Wissel model", align="cccc", digits = 3)
 
 
 ## ----Wissel1tableLATEX, eval = knitr::is_latex_output()-----------------------
-knitr::kable(regWISSEL1table, format = "latex", caption = "OLS estimation for part of the Wissel model", align="lcccc") 
+knitr::kable(regWISSEL1table, format = "latex", caption = "OLS estimation for part of the Wissel model", align="cccc", digits = 3) 
 
 
 ## ----Wissel2tableHTML, eval = knitr::is_html_output()-------------------------
-#> knitr::kable(regWISSEL2table, format = "html", caption = "OLS estimation for part of the Wissel model", align="lcccc")
+# knitr::kable(regWISSEL2table, format = "html", caption = "OLS estimation for part of the Wissel model", align="cccc", digits = 3)
 
 
 ## ----Wissel2tableLATEX, eval = knitr::is_latex_output()-----------------------
-knitr::kable(regWISSEL2table, format = "latex", caption = "OLS estimation for part of the Wissel model", align="lcccc") 
+knitr::kable(regWISSEL2table, format = "latex", caption = "OLS estimation for part of the Wissel model", align="cccc", digits = 3) 
 
 
 ## ----Wissel3tableHTML, eval = knitr::is_html_output()-------------------------
-#> knitr::kable(regWISSEL3table, format = "html", caption = "OLS estimation for part of the Wissel model", align="lcccc")
+# knitr::kable(regWISSEL3table, format = "html", caption = "OLS estimation for part of the Wissel model", align="cccc", digits = 3)
 
 
 ## ----Wissel3tableLATEX, eval = knitr::is_latex_output()-----------------------
-knitr::kable(regWISSEL3table, format = "latex", caption = "OLS estimation for part of the Wissel model", align="lcccc") 
+knitr::kable(regWISSEL3table, format = "latex", caption = "OLS estimation for part of the Wissel model", align="cccc", digits = 3) 
 
 
 ## ----WisselORTO---------------------------------------------------------------
@@ -142,25 +141,25 @@ regORTO = lm(y~Xo+0)
 
 
 ## ----WisselORTOtableHTML, eval = knitr::is_html_output()----------------------
-#> knitr::kable(regORTOtable, format = "html", caption = "OLS estimation for the orthonormal Wissel model", align="lcccc")
+# knitr::kable(regORTOtable, format = "html", caption = "OLS estimation for the orthonormal Wissel model", align="cccc", digits = 3)
 
 
 ## ----WisselORTOtableLATEX, eval = knitr::is_latex_output()--------------------
-knitr::kable(regORTOtable, format = "latex", caption = "OLS estimation for the orthonormal Wissel model", align="lcccc") 
+knitr::kable(regORTOtable, format = "latex", caption = "OLS estimation for the orthonormal Wissel model", align="cccc", digits = 3) 
 
 
 ## ----KGtableHTML, eval = knitr::is_html_output()------------------------------
-#> data(KG)
-#> KGtable = KG
-#> colnames(KGtable) = c("Consumption", "Wage income", "Non-farm income", "Farm income")
-#> knitr::kable(KGtable, format = "html", caption = "Data set presented previously by @KleinGoldberger", align="cccc")
+# data(KG)
+# KGtable = KG
+# colnames(KGtable) = c("Consumption", "Wage income", "Non-farm income", "Farm income")
+# knitr::kable(KGtable, format = "html", caption = "Data set presented previously by @KleinGoldberger", align="cccc", digits = 3)
 
 
 ## ----KGtableLATEX, eval = knitr::is_latex_output()----------------------------
 data(KG)
 KGtable = KG
 colnames(KGtable) = c("Consumption", "Wage income", "Non-farm income", "Farm income")
-knitr::kable(KGtable, format = "latex", caption = "Data set presented previously by @KleinGoldberger", align="cccc")
+knitr::kable(KGtable, format = "latex", caption = "Data set presented previously by Klein and Goldberger", align="cccc", digits = 3)
 
 
 ## ----KGregression-------------------------------------------------------------
@@ -184,46 +183,218 @@ regKG = lm(consumption~wage.income+non.farm.income+farm.income)
 
 
 ## ----regKGtableHTML, eval = knitr::is_html_output()---------------------------
-#> knitr::kable(regKGtable, format = "html", caption = "OLS estimation for the Klein and Goldberger model", align="lcccc")
+# knitr::kable(regKGtable, format = "html", caption = "OLS estimation for the Klein and Goldberger model", align="cccc", digits = 3)
 
 
 ## ----regKGtableLATEX, eval = knitr::is_latex_output()-------------------------
-knitr::kable(regKGtable, format = "latex", caption = "OLS estimation for the Klein and Goldberger model", align="lcccc") 
+knitr::kable(regKGtable, format = "latex", caption = "OLS estimation for the Klein and Goldberger model", align="cccc", digits = 3) 
 
 
 ## ----THEOREM------------------------------------------------------------------
 y = Wissel[,2]
 X = as.matrix(Wissel[,3:6])
-theoremWISSEL = Theorem(y, X)
+theoremWISSEL = multicollinearity(y, X)
 rownames(theoremWISSEL) = c("Intercept", "Personal consumption", "Personal income", "Outstanding consumer credit")
 
 y = KG[,1]
 cte = rep(1, length(y))
 X = as.matrix(cbind(cte, KG[,-1]))
-theoremKG = Theorem(y, X)
+theoremKG = multicollinearity(y, X)
 rownames(theoremKG) = c("Intercept", "Wage income", "Non-farm income", "Farm income")
 
 
 ## ----theoremWISSELtableHTML, eval = knitr::is_html_output()-------------------
-#> knitr::kable(theoremWISSEL, format = "html", caption = "Theorem results of the Wissel model", align="ccccc")
+# knitr::kable(theoremWISSEL, format = "html", caption = "Theorem results of the Wissel model", align="ccccc", digits = 6)
 
 
 ## ----theoremWISSELtableLATEX, eval = knitr::is_latex_output()-----------------
-knitr::kable(theoremWISSEL, format = "latex", caption = "Theorem results of the Wissel model", align="ccccc") 
+knitr::kable(theoremWISSEL, format = "latex", caption = "Theorem results of the Wissel model", align="ccccc", digits = 6) 
 
 
 ## ----theoremKGtableHTML, eval = knitr::is_html_output()-----------------------
-#> knitr::kable(theoremKG, format = "html", caption = "Theorem results of the Klein and Goldberger model", align="ccccc")
+# knitr::kable(theoremKG, format = "html", caption = "Theorem results of the Klein and Goldberger model", align="ccccc", digits = 6)
 
 
 ## ----theoremKGtableLATEX, eval = knitr::is_latex_output()---------------------
-knitr::kable(theoremKG, format = "latex", caption = "Theorem results of the Klein and Goldberger model", align="ccccc") 
+knitr::kable(theoremKG, format = "latex", caption = "Theorem results of the Klein and Goldberger model", align="ccccc", digits = 6) 
+
+
+## ----PAPER13, echo=TRUE-------------------------------------------------------
+y_W = Wissel[,2]
+X_W = Wissel[,3:6]
+multicollinearity(y_W, X_W)
+
+
+## ----PAPER14, echo=TRUE-------------------------------------------------------
+y_KG = KG[,1]
+cte = rep(1, length(y))
+X_KG = cbind(cte, KG[,2:4])
+multicollinearity(y_KG, X_KG)
+
+
+## ----PAPER15, echo=TRUE-------------------------------------------------------
+multicollinearity(y_W, X_W, alpha = 0.01)
+multicollinearity(y_KG, X_KG, alpha = 0.01)
+
+
+## ----SAMPLE-SIZE 1------------------------------------------------------------
+## Simulation 1
+set.seed(2024)
+obs = 3000 # no individual significance test is affected 
+cte = rep(1, obs)
+x2 = rnorm(obs, 5, 0.1)  # related to intercept: non essential
+x3 = rnorm(obs, 5, 10)
+x4 = x3 + rnorm(obs, 5, 0.5) # related to x3: essential
+x5 = rnorm(obs, -1, 3)
+x6 = rnorm(obs, 15, 2.5)
+y = 4 + 5*x2 - 9*x3 -2*x4 + 2*x5 + 7*x6 + rnorm(obs, 0, 2)
+X = cbind(cte, x2, x3, x4, x5, x6)
+theoremSIMULATION1 = multicollinearity(y, X)
+rownames(theoremSIMULATION1) = c("Intercept", "X2", "X3", "X4", "X5", "X6")
+vifsSIMULATION1 = VIF(X)
+cnSIMULATION1 = CN(X)
+cvsSIMULATION1 = CVs(X)
+
+## Simulation 2
+obs = 100 # decreasing the number of observations affected to intercept 
+cte = rep(1, obs)
+x2 = rnorm(obs, 5, 0.1)  # related to intercept: non essential
+x3 = rnorm(obs, 5, 10)
+x4 = x3 + rnorm(obs, 5, 0.5) # related to x3: essential
+x5 = rnorm(obs, -1, 3)
+x6 = rnorm(obs, 15, 2.5)
+y = 4 + 5*x2 - 9*x3 -2*x4 + 2*x5 + 7*x6 + rnorm(obs, 0, 2)
+X = cbind(cte, x2, x3, x4, x5, x6)
+theoremSIMULATION2 = multicollinearity(y, X)
+rownames(theoremSIMULATION2) = c("Intercept", "X2", "X3", "X4", "X5", "X6")
+vifsSIMULATION2 = VIF(X)
+cnSIMULATION2 = CN(X)
+cvsSIMULATION2 = CVs(X)
+
+## Simulation 3
+obs = 30 # decreasing the number of observations affected to intercept, x2 and x4 
+cte = rep(1, obs)
+x2 = rnorm(obs, 5, 0.1)  # related to intercept: non essential
+x3 = rnorm(obs, 5, 10)
+x4 = x3 + rnorm(obs, 5, 0.5) # related to x3: essential
+x5 = rnorm(obs, -1, 3)
+x6 = rnorm(obs, 15, 2.5)
+y = 4 + 5*x2 - 9*x3 -2*x4 + 2*x5 + 7*x6 + rnorm(obs, 0, 2)
+X = cbind(cte, x2, x3, x4, x5, x6)
+theoremSIMULATION3 = multicollinearity(y, X)
+rownames(theoremSIMULATION3) = c("Intercept", "X2", "X3", "X4", "X5", "X6")
+vifsSIMULATION3 = VIF(X)
+cnSIMULATION3 = CN(X)
+cvsSIMULATION3 = CVs(X)
+
+
+## ----traditionalSIMULATIONtableHTML, eval = knitr::is_html_output()-----------
+# traditionalSIMULATION = data.frame(c(cvsSIMULATION1, vifsSIMULATION1, cnSIMULATION1),
+#                                    c(cvsSIMULATION2, vifsSIMULATION2, cnSIMULATION2),
+#                                    c(cvsSIMULATION3, vifsSIMULATION3, cnSIMULATION3))
+# rownames(traditionalSIMULATION) = c("X2 CV", "X3 CV", "X4 CV", "X5 CV", "X6 CV", "X2 VIF", "X3 VIF", "X4 VIF", "X5 VIF", "X6 VIF", "CN")
+# colnames(traditionalSIMULATION) = c("Simulation 1", "Simulation 2", "Simulation 3")
+# knitr::kable(traditionalSIMULATION, format = "html", caption = "CVs, VIFs for data of Simulations 1, 2 and 3", align="cccccc", digits = 3)
+
+
+## ----traditionalSIMULATIONtableLATEX, eval = knitr::is_latex_output()---------
+traditionalSIMULATION = data.frame(c(cvsSIMULATION1, vifsSIMULATION1, cnSIMULATION1), 
+                                   c(cvsSIMULATION2, vifsSIMULATION2, cnSIMULATION2), 
+                                   c(cvsSIMULATION3, vifsSIMULATION3, cnSIMULATION3))
+rownames(traditionalSIMULATION) = c("X2 CV", "X3 CV", "X4 CV", "X5 CV", "X6 CV", "X2 VIF", "X3 VIF", "X4 VIF", "X5 VIF", "X6 VIF", "CN")
+colnames(traditionalSIMULATION) = c("Simulation 1", "Simulation 2", "Simulation 3")
+knitr::kable(traditionalSIMULATION, format = "latex", caption = "CVs, VIFs and CN for data of Simulations 1, 2 and 3", align="cccccc", digits = 3) 
+
+
+## ----theoremSIMULATION1tableHTML, eval = knitr::is_html_output()--------------
+# knitr::kable(theoremSIMULATION1, format = "html", caption = "Theorem results of the Simulation 1 model", align="cccccc", digits = 6)
+
+
+## ----theoremSIMULATION1tableLATEX, eval = knitr::is_latex_output()------------
+knitr::kable(theoremSIMULATION1, format = "latex", caption = "Theorem results of the Simulation 1 model", align="cccccc", digits = 6) 
+
+
+## ----theoremSIMULATION2tableHTML, eval = knitr::is_html_output()--------------
+# knitr::kable(theoremSIMULATION2, format = "html", caption = "Theorem results of the Simulation 2 model", align="cccccc", digits = 6)
+
+
+## ----theoremSIMULATION2tableLATEX, eval = knitr::is_latex_output()------------
+knitr::kable(theoremSIMULATION2, format = "latex", caption = "Theorem results of the Simulation 2 model", align="cccccc", digits = 6) 
+
+
+## ----theoremSIMULATION3tableHTML, eval = knitr::is_html_output()--------------
+# knitr::kable(theoremSIMULATION3, format = "html", caption = "Theorem results of the Simulation 3 model", align="cccccc", digits = 6)
+
+
+## ----theoremSIMULATION3tableLATEX, eval = knitr::is_latex_output()------------
+knitr::kable(theoremSIMULATION3, format = "latex", caption = "Theorem results of the Simulation 3 model", align="cccccc", digits = 6) 
+
+
+## ----Choice1------------------------------------------------------------------
+P = CDpf[,1]
+cte = CDpf[,2]
+K = CDpf[,3]
+W = CDpf[,4]
+
+data2 = cbind(cte, K, W)
+th2 = multicollinearity(P, data2)
+rownames(th2) = c("Intercept", "Capital", "Work")
+
+
+## ----theoremCHOICE1tableHTML, eval = knitr::is_html_output()------------------
+# knitr::kable(th2, format = "html", caption = "Theorem results of the Example 2 of @Salmeron2024a", align="cccccc", digits = 6)
+
+
+## ----theoremCHOICE1tableLATEX, eval = knitr::is_latex_output()----------------
+knitr::kable(th2, format = "latex", caption = "Theorem results of the Example 2 of Salmerón et al. (2025)", align="cccccc", digits = 6) 
+
+
+## ----Choice2------------------------------------------------------------------
+data2 = cbind(cte, W, K)
+th2 = multicollinearity(P, data2)
+rownames(th2) = c("Intercept", "Work", "Capital")
+
+
+## ----theoremCHOICE2tableHTML, eval = knitr::is_html_output()------------------
+# knitr::kable(th2, format = "html", caption = "Theorem results of the Example 2 of @Salmeron2024a (reordination 2)", align="cccccc", digits = 6)
+
+
+## ----theoremCHOICE2tableLATEX, eval = knitr::is_latex_output()----------------
+knitr::kable(th2, format = "latex", caption = "Theorem results of the Example 2 of Salmerón et al. (2025) (reordination 2)", align="cccccc", digits = 6) 
+
+
+## ----Choice7, eval=FALSE------------------------------------------------------
+# NE = employees[,1]
+# cte = employees[,2]
+# FA = employees[,3]
+# OI = employees[,4]
+# S = employees[,5]
+# reg = lm(NE~FA+OI+S)
+# summary(reg)
+
+
+## ----Choice8------------------------------------------------------------------
+NE = employees[,1]
+cte = employees[,2]
+FA = employees[,3]
+OI = employees[,4]
+S = employees[,5]
+data3 = cbind(OI, S, FA)
+th8 = multicollinearity(NE, data3)
+rownames(th8) = c("OI", "S", "FA")
+
+
+## ----theoremCHOICE8tableHTML, eval = knitr::is_html_output()------------------
+# knitr::kable(th8, format = "html", caption = "Theorem results of the Example 3 of @Salmeron2024a reordination", align="ccccc", digits=20)
+
+
+## ----theoremCHOICE8tableLATEX, eval = knitr::is_latex_output()----------------
+knitr::kable(th8, format = "latex", caption = "Theorem results of the Example 3 of Salmerón et al. (2025) reordination", align="ccccc", digits=20) 
 
 
 ## ----PAPER1, echo=TRUE--------------------------------------------------------
-data(euribor)
 E = euribor[,1]
-data1 = as.matrix(euribor[,-1])
+data1 = euribor[,-1]
 
 VIF(data1) 
 CN(data1)
@@ -231,51 +402,64 @@ CVs(data1)
 
 
 ## ----PAPER2, echo = knitr::is_html_output(), eval = knitr::is_html_output()----
-#> RVIF(data1, l_u = T)
+# rvifs(data1, ul = T, intercept = T)
 
 
 ## ----PAPER2bis, echo = knitr::is_latex_output(), eval = knitr::is_latex_output()----
-RVIF(data1, l_u = T, graf = FALSE) 
+rvifs(data1, ul = T, intercept = T) 
+
+
+## ----PAPER_2, echo = knitr::is_html_output(), eval = knitr::is_html_output()----
+# reg_E = lm(euribor[,1]~as.matrix(euribor[,-c(1,2)]))
+# rvifs(model.matrix(reg_E))
+
+
+## ----PAPER_2bis, echo = knitr::is_latex_output(), eval = knitr::is_latex_output()----
+reg_E = lm(euribor[,1]~as.matrix(euribor[,-c(1,2)]))
+rvifs(model.matrix(reg_E))
 
 
 ## ----PAPER3, echo=TRUE--------------------------------------------------------
-Theorem(E, data1) 
+multicollinearity(E, data1) 
 
 
 ## ----PAPER4, echo=TRUE--------------------------------------------------------
-data(CDpf)
 P = CDpf[,1]
-data2 = as.matrix(CDpf[,2:4])
+data2 = CDpf[,2:4]
 
 
 ## ----PAPER4bis, echo = knitr::is_html_output(), eval = knitr::is_html_output()----
-#> RVIF(data2, l_u = T)
+# rvifs(data2, ul = T)
 
 
 ## ----PAPER4tris, echo = knitr::is_latex_output(), eval = knitr::is_latex_output()----
-RVIF(data2, l_u = T, graf = FALSE) 
+rvifs(data2, ul = T) 
 
 
 ## ----PAPER5, echo=TRUE--------------------------------------------------------
-Theorem(P, data2)
+multicollinearity(P, data2)
+
+
+## ----PAPER5bis, echo=TRUE-----------------------------------------------------
+data2 = CDpf[,c(2,4,3)]
+multicollinearity(P, data2)
 
 
 ## ----PAPER6, echo=TRUE--------------------------------------------------------
-data(employees)
 NE = employees[,1]
-data3 = as.matrix(employees[,2:5])
+data3 = employees[,2:5]
 
 
 ## ----PAPER6bis, echo = knitr::is_html_output(), eval = knitr::is_html_output()----
-#> RVIF(data3, l_u = T)
+# rvifs(data3, ul = T)
 
 
 ## ----PAPER6tris, echo = knitr::is_latex_output(), eval = knitr::is_latex_output()----
-RVIF(data3, l_u = T, graf = FALSE) 
+rvifs(data3, ul = T) 
 
 
 ## ----PAPER7, echo=TRUE--------------------------------------------------------
-Theorem(NE, data3[,-1])
+multicollinearity(NE, data3[,-1])
 
 
 ## ----PAPER8, echo=TRUE--------------------------------------------------------
@@ -292,234 +476,14 @@ data4.2 = cbind(cte4, Z)
 
 
 ## ----PAPER10, echo=TRUE-------------------------------------------------------
-RVIF(data4.1, l_u = T, graf=F) 
+rvifs(data4.1, ul = T) 
 
 
 ## ----PAPER11, echo=TRUE-------------------------------------------------------
-RVIF(data4.2, l_u = T, graf=F) 
+rvifs(data4.2, ul = T) 
 
 
 ## ----PAPER12, echo=TRUE-------------------------------------------------------
-Theorem(y1, data4.1)
-Theorem(y2, data4.2)
-
-
-## ----PAPER13, echo=TRUE-------------------------------------------------------
-data(Wissel)
-y_W = Wissel[,2]
-X_W = as.matrix(Wissel[,3:6])
-Theorem(y_W, X_W)
-
-
-## ----PAPER14, echo=TRUE-------------------------------------------------------
-data(KG)
-y_KG = KG[,1]
-cte = rep(1, length(y))
-X_KG = as.matrix(cbind(cte, KG[,2:4]))
-Theorem(y_KG, X_KG)
-
-
-## ----PAPER15, echo=TRUE-------------------------------------------------------
-Theorem(y_W, X_W, alfa = 0.01)
-Theorem(y_KG, X_KG, alfa = 0.01)
-
-
-## ----SAMPLE-SIZE 1------------------------------------------------------------
-## Simulation 1
-set.seed(2024)
-obs = 3000 # no individual significance test is affected 
-cte = rep(1, obs)
-x2 = rnorm(obs, 5, 0.1)  # related to intercept: non essential
-x3 = rnorm(obs, 5, 10)
-x4 = x3 + rnorm(obs, 5, 0.5) # related to x3: essential
-x5 = rnorm(obs, -1, 3)
-x6 = rnorm(obs, 15, 2.5)
-y = 4 + 5*x2 - 9*x3 -2*x4 + 2*x5 + 7*x6 + rnorm(obs, 0, 2)
-X = cbind(cte, x2, x3, x4, x5, x6)
-theoremSIMULATION1 = Theorem(y, X)
-rownames(theoremSIMULATION1) = c("Intercept", "X2", "X3", "X4", "X5", "X6")
-vifsSIMULATION1 = VIF(X)
-cnSIMULATION1 = CN(X)
-cvsSIMULATION1 = CVs(X)
-
-## Simulation 2
-obs = 100 # decreasing the number of observations affected to intercept 
-cte = rep(1, obs)
-x2 = rnorm(obs, 5, 0.1)  # related to intercept: non essential
-x3 = rnorm(obs, 5, 10)
-x4 = x3 + rnorm(obs, 5, 0.5) # related to x3: essential
-x5 = rnorm(obs, -1, 3)
-x6 = rnorm(obs, 15, 2.5)
-y = 4 + 5*x2 - 9*x3 -2*x4 + 2*x5 + 7*x6 + rnorm(obs, 0, 2)
-X = cbind(cte, x2, x3, x4, x5, x6)
-theoremSIMULATION2 = Theorem(y, X)
-rownames(theoremSIMULATION2) = c("Intercept", "X2", "X3", "X4", "X5", "X6")
-vifsSIMULATION2 = VIF(X)
-cnSIMULATION2 = CN(X)
-cvsSIMULATION2 = CVs(X)
-
-## Simulation 3
-obs = 30 # decreasing the number of observations affected to intercept, x2 and x4 
-cte = rep(1, obs)
-x2 = rnorm(obs, 5, 0.1)  # related to intercept: non essential
-x3 = rnorm(obs, 5, 10)
-x4 = x3 + rnorm(obs, 5, 0.5) # related to x3: essential
-x5 = rnorm(obs, -1, 3)
-x6 = rnorm(obs, 15, 2.5)
-y = 4 + 5*x2 - 9*x3 -2*x4 + 2*x5 + 7*x6 + rnorm(obs, 0, 2)
-X = cbind(cte, x2, x3, x4, x5, x6)
-theoremSIMULATION3 = Theorem(y, X)
-rownames(theoremSIMULATION3) = c("Intercept", "X2", "X3", "X4", "X5", "X6")
-vifsSIMULATION3 = VIF(X)
-cnSIMULATION3 = CN(X)
-cvsSIMULATION3 = CVs(X)
-
-
-## ----traditionalSIMULATIONtableHTML, eval = knitr::is_html_output()-----------
-#> traditionalSIMULATION = data.frame(c(cvsSIMULATION1, vifsSIMULATION1, cnSIMULATION1),
-#>                                    c(cvsSIMULATION2, vifsSIMULATION2, cnSIMULATION2),
-#>                                    c(cvsSIMULATION3, vifsSIMULATION3, cnSIMULATION3))
-#> rownames(traditionalSIMULATION) = c("X2 CV", "X3 CV", "X4 CV", "X5 CV", "X6 CV", "X2 VIF", "X3 VIF", "X4 VIF", "X5 VIF", "X6 VIF", "CN")
-#> colnames(traditionalSIMULATION) = c("Simulation 1", "Simulation 2", "Simulation 3")
-#> knitr::kable(traditionalSIMULATION, format = "html", caption = "CVs, VIFs for data of Simulations 1, 2 and 3", align="cccccc")
-
-
-## ----traditionalSIMULATIONtableLATEX, eval = knitr::is_latex_output()---------
-traditionalSIMULATION = data.frame(c(cvsSIMULATION1, vifsSIMULATION1, cnSIMULATION1), 
-                                   c(cvsSIMULATION2, vifsSIMULATION2, cnSIMULATION2), 
-                                   c(cvsSIMULATION3, vifsSIMULATION3, cnSIMULATION3))
-rownames(traditionalSIMULATION) = c("X2 CV", "X3 CV", "X4 CV", "X5 CV", "X6 CV", "X2 VIF", "X3 VIF", "X4 VIF", "X5 VIF", "X6 VIF", "CN")
-colnames(traditionalSIMULATION) = c("Simulation 1", "Simulation 2", "Simulation 3")
-knitr::kable(traditionalSIMULATION, format = "latex", caption = "CVs, VIFs and CN for data of Simulations 1, 2 and 3", align="cccccc") 
-
-
-## ----theoremSIMULATION1tableHTML, eval = knitr::is_html_output()--------------
-#> knitr::kable(theoremSIMULATION1, format = "html", caption = "Theorem results of the Simulation 1 model", align="cccccc")
-
-
-## ----theoremSIMULATION1tableLATEX, eval = knitr::is_latex_output()------------
-knitr::kable(theoremSIMULATION1, format = "latex", caption = "Theorem results of the Simulation 1 model", align="cccccc") 
-
-
-## ----theoremSIMULATION2tableHTML, eval = knitr::is_html_output()--------------
-#> knitr::kable(theoremSIMULATION2, format = "html", caption = "Theorem results of the Simulation 2 model", align="cccccc")
-
-
-## ----theoremSIMULATION2tableLATEX, eval = knitr::is_latex_output()------------
-knitr::kable(theoremSIMULATION2, format = "latex", caption = "Theorem results of the Simulation 2 model", align="cccccc") 
-
-
-## ----theoremSIMULATION3tableHTML, eval = knitr::is_html_output()--------------
-#> knitr::kable(theoremSIMULATION3, format = "html", caption = "Theorem results of the Simulation 3 model", align="cccccc")
-
-
-## ----theoremSIMULATION3tableLATEX, eval = knitr::is_latex_output()------------
-knitr::kable(theoremSIMULATION3, format = "latex", caption = "Theorem results of the Simulation 3 model", align="cccccc") 
-
-
-## ----Choice2------------------------------------------------------------------
-data(CDpf)
-P = CDpf[,1]
-cte = CDpf[,2]
-K = CDpf[,3]
-W = CDpf[,4]
-
-data2 = cbind(cte, W, K)
-th2 = Theorem(P, data2)
-rownames(th2) = c("Intercept", "Work", "Capital")
-
-
-## ----theoremCHOICE2tableHTML, eval = knitr::is_html_output()------------------
-#> knitr::kable(th2, format = "html", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 2)", align="cccccc")
-
-
-## ----theoremCHOICE2tableLATEX, eval = knitr::is_latex_output()----------------
-knitr::kable(th2, format = "latex", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 2)", align="cccccc") 
-
-
-## ----Choice3------------------------------------------------------------------
-data2 = cbind(K, cte, W)
-th3 = Theorem(P, data2)
-rownames(th3) = c("Capital", "Intercept", "Work")
-
-
-## ----theoremCHOICE3tableHTML, eval = knitr::is_html_output()------------------
-#> knitr::kable(th3, format = "html", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 3)", align="cccccc")
-
-
-## ----theoremCHOICE3tableLATEX, eval = knitr::is_latex_output()----------------
-knitr::kable(th3, format = "latex", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 3)", align="cccccc") 
-
-
-## ----Choice4------------------------------------------------------------------
-data2 = cbind(K, W, cte)
-th4 = Theorem(P, data2)
-rownames(th4) = c("Capital", "Work", "Intercept")
-
-
-## ----theoremCHOICE4tableHTML, eval = knitr::is_html_output()------------------
-#> knitr::kable(th4, format = "html", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 4)", align="cccccc")
-
-
-## ----theoremCHOICE4tableLATEX, eval = knitr::is_latex_output()----------------
-knitr::kable(th4, format = "latex", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 4)", align="cccccc") 
-
-
-## ----Choice5------------------------------------------------------------------
-data2 = cbind(W, cte, K)
-th5 = Theorem(P, data2)
-rownames(th5) = c("Work", "Intercept", "Capital")
-
-
-## ----theoremCHOICE5tableHTML, eval = knitr::is_html_output()------------------
-#> knitr::kable(th5, format = "html", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 5)", align="cccccc")
-
-
-## ----theoremCHOICE5tableLATEX, eval = knitr::is_latex_output()----------------
-knitr::kable(th5, format = "latex", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 5)", align="cccccc") 
-
-
-## ----Choice6------------------------------------------------------------------
-data2 = cbind(W, K, cte)
-th6 = Theorem(P, data2)
-rownames(th6) = c("Work", "Capital", "Intercept")
-
-
-## ----theoremCHOICE6tableHTML, eval = knitr::is_html_output()------------------
-#> knitr::kable(th6, format = "html", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 6)", align="cccccc")
-
-
-## ----theoremCHOICE6tableLATEX, eval = knitr::is_latex_output()----------------
-knitr::kable(th6, format = "latex", caption = "Theorem results of the @Salmeron2024a Example 2 (reordination 6)", align="cccccc") 
-
-
-## ----Choice7, eval=FALSE------------------------------------------------------
-#> data(employees)
-#> NE = employees[,1]
-#> cte = employees[,2]
-#> FA = employees[,3]
-#> OI = employees[,4]
-#> S = employees[,5]
-#> reg = lm(NE~FA+OI+S)
-#> summary(reg)
-
-
-## ----Choice8------------------------------------------------------------------
-data(employees)
-NE = employees[,1]
-cte = employees[,2]
-FA = employees[,3]
-OI = employees[,4]
-S = employees[,5]
-data3 = cbind(OI, S, FA)
-th8 = Theorem(NE, data3)
-rownames(th8) = c("OI", "S", "FA")
-
-
-## ----theoremCHOICE8tableHTML, eval = knitr::is_html_output()------------------
-#> knitr::kable(th8, format = "html", caption = "Theorem results of the @Salmeron2024a Example 3 reordination", align="ccccc", digits=28)
-
-
-## ----theoremCHOICE8tableLATEX, eval = knitr::is_latex_output()----------------
-knitr::kable(th8, format = "latex", caption = "Theorem results of the @Salmeron2024a Example 3 reordination", align="ccccc", digits=28) 
+multicollinearity(y1, data4.1)
+multicollinearity(y2, data4.2)
 

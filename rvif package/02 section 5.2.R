@@ -14,7 +14,7 @@ library(rvif) # call multiColl package
   y = 4 + 5*x2 - 9*x3 -2*x4 + 2*x5 + 7*x6 + rnorm(obs, 0, 2)
   X = cbind(cte, x2, x3, x4, x5, x6) 
 
-    theoremSIMULATION1 = Theorem(y, X)  # rvif function
+    theoremSIMULATION1 = multicollinearity(y, X)  # rvif function
     rownames(theoremSIMULATION1) = c("Intercept", "X2", "X3", "X4", "X5", "X6")
 
     vifsSIMULATION1 = VIF(X) # multiColl function
@@ -33,7 +33,7 @@ library(rvif) # call multiColl package
   y = 4 + 5*x2 - 9*x3 -2*x4 + 2*x5 + 7*x6 + rnorm(obs, 0, 2)
   X = cbind(cte, x2, x3, x4, x5, x6)
   
-    theoremSIMULATION2 = Theorem(y, X) # rvif function
+    theoremSIMULATION2 = multicollinearity(y, X) # rvif function
     rownames(theoremSIMULATION2) = c("Intercept", "X2", "X3", "X4", "X5", "X6")
 
     vifsSIMULATION2 = VIF(X) # multiColl function
@@ -52,7 +52,7 @@ library(rvif) # call multiColl package
   y = 4 + 5*x2 - 9*x3 -2*x4 + 2*x5 + 7*x6 + rnorm(obs, 0, 2)
   X = cbind(cte, x2, x3, x4, x5, x6)
   
-    theoremSIMULATION3 = Theorem(y, X) # rvif function
+    theoremSIMULATION3 = multicollinearity(y, X) # rvif function
     rownames(theoremSIMULATION3) = c("Intercept", "X2", "X3", "X4", "X5", "X6")
 
     vifsSIMULATION3 = VIF(X) # multiColl function
